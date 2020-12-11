@@ -25,7 +25,7 @@ public class CovidListForjava11 {
 		HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
 		ObjectMapper mapper = new ObjectMapper();
-		// Liste olusturuluyor
+		
 		List<CovidModel> posts = mapper.readValue(response.body(), new TypeReference<List<CovidModel>>() {
 		});
 
