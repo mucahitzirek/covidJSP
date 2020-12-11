@@ -18,18 +18,16 @@
 
 <body>
 	<%
-    Locale yerel = request.getLocale( );
-    String tarihsaat = DateFormat.getDateTimeInstance(
-                  DateFormat.FULL, 
-                  DateFormat.SHORT, 
-                  yerel).format(new Date( ));
-%>
-		<h1 align="center">
-	
-		<%
-		out.print(tarihsaat);
+   		  Locale local = request.getLocale( );
+   		  String timeDate = DateFormat.getDateTimeInstance(DateFormat.FULL, DateFormat.SHORT,local).format(new Date( ));
 	%>
-	</h1>
+	
+		<h1 align="center">
+		<%
+		out.print(timeDate);
+		%>
+		</h1>
+	
 	<table class="table">
 		<thead class="thead-dark">
 			<tr>
