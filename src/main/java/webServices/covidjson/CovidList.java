@@ -32,7 +32,6 @@ public class CovidList {
 			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 			String result = bufferedReader.readLine();
 
-			// json
 			jsonsetModel.getParse(result);
 
 			connection.disconnect();
