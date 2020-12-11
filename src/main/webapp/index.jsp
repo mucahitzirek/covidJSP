@@ -4,6 +4,8 @@
 <%@page import="java.io.BufferedReader"%>
 <%@page import="java.net.HttpURLConnection"%>
 <%@page import="java.net.URL"%>
+<%@ page import="java.io.*,java.util.Locale" %>
+<%@ page import="java.text.DateFormat,java.util.Date" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -15,6 +17,19 @@
 <html>
 
 <body>
+	<%
+    Locale yerel = request.getLocale( );
+    String tarihsaat = DateFormat.getDateTimeInstance(
+                  DateFormat.FULL, 
+                  DateFormat.SHORT, 
+                  yerel).format(new Date( ));
+%>
+		<h1 align="center">
+	
+		<%
+		out.print(tarihsaat);
+	%>
+	</h1>
 	<table class="table">
 		<thead class="thead-dark">
 			<tr>
