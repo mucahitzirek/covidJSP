@@ -22,8 +22,6 @@ public class jsonsetModel {
 			covid.setTodayCases(jsonObject.getInt("todayCases"));
 			covid.setDeaths(jsonObject.getInt("deaths"));
 			covid.setTodayDeaths(jsonObject.getInt("todayDeaths"));
-
-			// recovered ve active degerleri hata verdi cekilemedi?
 			covid.setCritical(jsonObject.getInt("critical"));
 			covid.setCasesPerOneMillion(jsonObject.getInt("casesPerOneMillion"));
 			covid.setDeathsPerOneMillion(jsonObject.getInt("deathsPerOneMillion"));
